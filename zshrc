@@ -1,65 +1,35 @@
-# load our own completion functions
-fpath=(~/.zsh/completion $fpath)
+ZSH=$HOME/.oh-my-zsh
 
-# completion
-autoload -U compinit
-compinit
+ZSH_THEME="brennovich"
+DISABLE_LS_COLORS="true"
+
+alias g="git"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias refresh="source ~/.zshrc"
+alias fresh_schema="rm db/schema.rb && rake db:drop:all && rake db:create && rake db:migrate && rake db:test:prepare"
+alias box="cd ~/Code/brotodevbox && vagrant up && vagrant ssh"
+alias rbp="rails_best_practices -f html . --output-file public/rbp.html"
+alias sp="spin push"
+alias ss="spin serve"
+alias ks="kicker -c -s -q -l 0.1 -r rails -b 'spin push'"
+alias dev_env="bundle exec guard"
+alias be="bundle exec"
+alias denv="killall ruby &>/dev/null & kicker -c -s -q -l 0.1 -r rails -b 'spin push' & ss & rails s"
+alias spa="sp rspec spec"
+
+# plugins=(rbenv brew terminalapp osx)
+plugins=(terminalapp)
 
 # automatically enter directories without cd
 setopt auto_cd
 
-# use vim as an editor
-export EDITOR=vim
+source $ZSH/oh-my-zsh.sh
 
-# aliases
-if [ -e "$HOME/.aliases" ]; then
-  source "$HOME/.aliases"
-fi
+export EDITOR="mvim"
 
-# vi mode
-bindkey -v
-bindkey "^F" vi-cmd-mode
-bindkey jj vi-cmd-mode
+PATH=/usr/local/bin:$PATH:/usr/local/share/python:/usr/local/share/npm/bin
+eval "$(rbenv init -)"
 
-# use incremental search
-bindkey "^R" history-incremental-search-backward
-
-# add some readline keys back
-bindkey "^A" beginning-of-line
-bindkey "^E" end-of-line
-
-# handy keybindings
-bindkey "^P" history-search-backward
-bindkey "^Y" accept-and-hold
-bindkey "^N" insert-last-word
-bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
-
-# expand functions in the prompt
-setopt prompt_subst
-
-# prompt
-export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
-
-# ignore duplicate history entries
-setopt histignoredups
-
-# keep TONS of history
-export HISTSIZE=4096
-
-# look for ey config in project dirs
-export EYRC=./.eyrc
-
-# automatically pushd
-setopt auto_pushd
-export dirstacksize=5
-
-# awesome cd movements from zshkit
-setopt AUTOCD
-setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
-setopt cdablevars
-
-# Try to correct command line spelling
-setopt CORRECT CORRECT_ALL
-
-# Enable extended globbing
-setopt EXTENDED_GLOB
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

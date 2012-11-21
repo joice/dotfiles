@@ -1,0 +1,65 @@
+" Use UTF-8 without BOM
+set encoding=utf-8 nobomb
+
+" Highlight current line
+" set cursorline
+
+" Add some line space for easy reading
+set linespace=4
+
+" Wrap Lines
+set wrap
+" set linebreak
+set textwidth=0
+set wrapmargin=0
+
+" Show “invisible” characters
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set list
+
+" if exists("&relativenumber")
+"   " Use relative line numbers
+"   set relativenumber
+"   au BufReadPost * set relativenumber
+" endif
+
+" Strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+if has("gui_running")
+  " Colour scheme
+  set background=light
+  colorscheme github
+  set lines=33 columns=90
+  set guioptions+=LlRrb
+  set guioptions-=LlRrb
+  set guioptions-=T
+  set guifont=Monaco:h14
+endif
+
+" NerdTREE
+let g:NERDTreeWinSize = 25
+silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>f :NERDTreeFind<CR>
+
+" Ragtag
+inoremap <M-o>       <Esc>o
+inoremap <C-j>       <Down>
+let g:ragtag_global_maps = 1
+
+" Cleanup search highlight
+nnoremap <silent> <Leader>cc :let @/ = ""<CR>
+
+" CSScomb
+nnoremap <silent> <Leader>+ :CSSComb<CR>
