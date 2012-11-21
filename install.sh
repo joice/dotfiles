@@ -34,5 +34,5 @@ for name in *; do
   fi
 done
 
-ls -s "$PWD/vim/janus/vim/gvimrc" "$HOME/.gvimrc"
-ls -s "$PWD/vim/janus/vim/vimrc" "$HOME/.vimrc"
+ln -s "$PWD/vim/janus/vim/gvimrc" "$HOME/.gvimrc"
+ln -s "$PWD/vim/janus/vim/vimrc" "$HOME/.vimrc"
