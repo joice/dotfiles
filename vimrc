@@ -2,7 +2,7 @@
 set encoding=utf-8 nobomb
 
 " Leader
-let mapleader = " "
+let mapleader = "\\"
 
 set nocompatible  " Use Vim settings, rather then Vi settings
 set nobackup
@@ -51,6 +51,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tsaleh/vim-matchit'
@@ -196,3 +197,13 @@ endfunction
 
 " Cleanup search highlight
 nnoremap <silent> <Leader>cc :let @/ = ""<CR>
+
+" NerdTREE
+let g:NERDTreeWinSize = 25
+silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>f :NERDTreeFind<CR>
+
+" Ragtag
+inoremap <M-o>       <Esc>o
+inoremap <C-j>       <Down>
+let g:ragtag_global_maps = 1
