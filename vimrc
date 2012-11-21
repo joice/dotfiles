@@ -1,3 +1,6 @@
+" Use UTF-8 without BOM
+set encoding=utf-8 nobomb
+
 " Leader
 let mapleader = " "
 
@@ -17,6 +20,20 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
+" Strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
 " Declare bundles are handled via Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -27,6 +44,7 @@ Bundle 'gmarik/vundle'
 " Define bundles via Github repos
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nanki/treetop.vim'
+Bundle 'scrooloose/nerdtree'
 Bundle 'timcharper/textile.vim'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-endwise'
@@ -63,7 +81,16 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-" Display extra whitespace
+" Add some line space for easy reading
+set linespace=4
+
+" Wordwrap
+set nowrap
+set linebreak
+set textwidth=0
+set wrapmargin=0
+
+" Show “invisible” characters
 set list listchars=tab:»·,trail:·
 
 " Local config
@@ -78,8 +105,6 @@ endif
 
 " Color scheme
 colorscheme github
-highlight NonText guibg=#060606
-highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 " Numbers
 set number
@@ -168,3 +193,6 @@ endfunction
 function! RunSpecs(command)
   execute ":w\|!clear && echo " . a:command . " && echo && " . a:command
 endfunction
+
+" Cleanup search highlight
+nnoremap <silent> <Leader>cc :let @/ = ""<CR>
