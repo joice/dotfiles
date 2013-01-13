@@ -3,15 +3,10 @@ brennovich dotfiles
 
 - Based on thoughtbots dotfiles
 
-Requirements
-------------
-
-Set zsh as your login shell.
-
-    chsh -s /bin/zsh
-
 Features
 --------
 
 - Janus
-- oh-my-zsh
+- Clean bash_profile
+- Featured vimrc.after config
+- `gemrc` install gem without docs
