@@ -39,5 +39,6 @@ for name in *; do
   fi
 done
 
+ln -s "$PWD/bashrc" "$HOME/.bash_profile"
 ln -s "$PWD/vim/janus/vim/gvimrc" "$HOME/.gvimrc"
 ln -s "$PWD/vim/janus/vim/vimrc" "$HOME/.vimrc"
