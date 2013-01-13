@@ -105,3 +105,6 @@
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
   enabled = true
 
+[user]
+	name = Brenno Costa
+	email = brennolncosta@gmail.com

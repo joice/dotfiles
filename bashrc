@@ -21,6 +21,9 @@ PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH:/usr/local/share/python
 # Default Editor
 export EDITOR=mvim
 
+# Call Aliases
+source ~/.aliases
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
