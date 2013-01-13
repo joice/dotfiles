@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Janus vim distribution
+echo 'Installing Janus'
+curl -Lo- https://bit.ly/janus-bootstrap | bash
+echo 'Janus installed successfully'
+
 cutstring="DO NOT EDIT BELOW THIS LINE"
 
 for name in *; do
