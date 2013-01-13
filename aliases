@@ -11,10 +11,6 @@ alias -g M='| less'
 alias -g L='| wc -l'
 alias -g ONE="| awk '{ print \$1}'"
 
-# git
-alias g="git"
-alias gci="git pull --rebase && rake && git push"
-
 # Bundler
 alias b="bundle"
 
@@ -44,3 +40,15 @@ alias production-tail='heroku logs --tail --remote production'
 # Heroku databases
 alias db-backup-production='heroku pgbackups:capture --remote production'
 alias db-copy-production-to-staging='heroku pgbackups:restore DATABASE `heroku pgbackups:url --remote production` --remote staging  --confirm `basename $PWD`-staging'
+
+# Shortcuts
+alias g="git"
+alias fresh_schema="rm db/schema.rb && rake db:drop:all && rake db:create && rake db:migrate && rake db:test:prepare"
+alias rbp="rails_best_practices -f html . --output-file public/rbp.html"
+alias sp="spin push"
+alias spr="sp push rspec"
+alias ss="spin serve"
+alias ks="kicker -c -s -q -l 0.1 -r rails -b 'spin push'"
+alias be="bundle exec"
+alias denv="killall ruby &>/dev/null & kicker -c -s -q -l 0.1 -r rails -b 'spin push' & ss & rails s"
+alias spa="sp rspec spec"
