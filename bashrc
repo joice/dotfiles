@@ -12,6 +12,13 @@ function parse_git_branch {
   fi
 }
 
+# Tell ls to be colourful
+export CLICOLOR=1
+export LSCOLORS=Exfxcxdxbxegedabagacad
+
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
 # Simple PS1
 PS1="\[\033[0;37m\]using\[\033[0m\] \$(rbenv_ps1) \[\033[0;37m\]at\[\033[0m\] \\W \$(parse_git_branch) \n\\[\033[0;31m\]\\$\[\033[0m\] "
 
@@ -28,5 +35,7 @@ source ~/.aliases
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # rbenv Configurations
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+source ~/.rbenvrc
 
+# Python
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
