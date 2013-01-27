@@ -5,7 +5,7 @@ set encoding=utf-8 nobomb
 " set cursorline
 
 " Add some line space for easy reading
-set linespace=2
+set linespace=0
 
 " Wrap Lines
 " set wrap
@@ -25,42 +25,41 @@ set list
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " Do the business:
-    %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
-    let @/=_s
-    call cursor(l, c)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  %s/\s\+$//e
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 set scrolloff=8
 
+"colorscheme hemisu
+" let g:Powerline_symbols = 'fancy'
+let g:Powerline_theme = 'solarized256'
+let g:Powerline_colorscheme = 'solarized256'
+
+set background=light
+colorscheme hemisu
+
 if has("gui_running")
-  colorscheme solarized
   set lines=33 columns=90
   set guioptions+=LlRrb
   set guioptions-=LlRrb
   set guioptions-=T
-  set guifont=Inconsolata\ XL:h14
+  set guifont=Inconsolata-dz\ for\ Powerline:h14
 endif
 
 " NerdTREE
-let g:NERDTreeWinSize = 25
+let g:NERDTreeWinSize = 22
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>f :NERDTreeFind<CR>
 
-" Ragtag
-inoremap <M-o>       <Esc>o
-inoremap <C-j>       <Down>
-let g:ragtag_global_maps = 1
-
 " Cleanup search highlight
 nnoremap <silent> <Leader>cc :let @/ = ""<CR>
-
-" CSScomb
-nnoremap <silent> <Leader>+ :CSSComb<CR>
 
