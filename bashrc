@@ -18,6 +18,7 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
+export TERM=xterm-256color
 
 # Simple PS1
 PS1="\[\033[0;37m\]using\[\033[0m\] \$(rbenv_ps1) \[\033[0;37m\]at\[\033[0m\] \\W \$(parse_git_branch) \n\\[\033[0;31m\]\\$\[\033[0m\] "
@@ -38,4 +39,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 source ~/.rbenvrc
 
 # Python
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+#PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
