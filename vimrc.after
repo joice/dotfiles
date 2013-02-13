@@ -5,7 +5,7 @@ set encoding=utf-8 nobomb
 " set cursorline
 
 " Add some line space for easy reading
-set linespace=0
+set linespace=1
 
 " Wrap Lines
 " set wrap
@@ -17,11 +17,11 @@ set wrapmargin=0
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
 
-" if exists("&relativenumber")
-"   " Use relative line numbers
-"   set relativenumber
-"   au BufReadPost * set relativenumber
-" endif
+if exists("&relativenumber")
+  " Use relative line numbers
+  set relativenumber
+  au BufReadPost * set relativenumber
+endif
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
@@ -40,19 +40,21 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 set scrolloff=8
 
 "colorscheme hemisu
-" let g:Powerline_symbols = 'fancy'
-let g:Powerline_theme = 'solarized256'
-let g:Powerline_colorscheme = 'solarized256'
 
+let g:solarized_termcolors=256
 set background=light
-colorscheme hemisu
+colorscheme solarized
 
 if has("gui_running")
-  set lines=33 columns=90
+  let g:Powerline_symbols = 'fancy'
+  let g:Powerline_colorscheme = 'solarized'
+  set background=light
+  colorscheme solarized
+  set lines=35 columns=102
   set guioptions+=LlRrb
   set guioptions-=LlRrb
   set guioptions-=T
-  set guifont=Inconsolata-dz\ for\ Powerline:h14
+  set guifont=Inconsolata\ for\ Powerline:h16
 endif
 
 " NerdTREE
