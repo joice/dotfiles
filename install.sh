@@ -1,9 +1,6 @@
 #!/bin/sh
 
-# Janus vim distribution
-echo 'Installing Janus'
-curl -Lo- https://bit.ly/janus-bootstrap | bash
-echo 'Janus installed successfully'
+ln -s "$PWD/vim/vimrc" "$HOME/.vimrc"
 
 cutstring="DO NOT EDIT BELOW THIS LINE"
 
@@ -39,5 +36,3 @@ for name in *; do
   fi
 done
 
-ln -s "$PWD/vim/janus/vim/gvimrc" "$HOME/.gvimrc"
-ln -s "$PWD/vim/janus/vim/vimrc" "$HOME/.vimrc"
