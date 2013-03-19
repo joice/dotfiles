@@ -5,13 +5,13 @@ set encoding=utf-8 nobomb
 " set cursorline
 
 " Add some line space for easy reading
-set linespace=1
+set linespace=0
 
 " Wrap Lines
 " set wrap
 " set linebreak
-set textwidth=0
-set wrapmargin=0
+" set textwidth=0
+" set wrapmargin=0
 
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
@@ -39,17 +39,10 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 set scrolloff=8
 
-"colorscheme hemisu
-
-let g:solarized_termcolors=256
-set background=light
-colorscheme solarized
+"let g:hybrid_use_Xresources = 1
+colorscheme hybrid
 
 if has("gui_running")
-  let g:Powerline_symbols = 'fancy'
-  let g:Powerline_colorscheme = 'solarized'
-  set background=light
-  colorscheme solarized
   set lines=35 columns=102
   set guioptions+=LlRrb
   set guioptions-=LlRrb
@@ -65,3 +58,5 @@ nnoremap <silent> <Leader>f :NERDTreeFind<CR>
 " Cleanup search highlight
 nnoremap <silent> <Leader>cc :let @/ = ""<CR>
 
+" Gitgutter
+highlight clear SignColumn

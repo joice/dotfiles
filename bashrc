@@ -24,24 +24,20 @@ export TERM=xterm-256color
 PS1="\[\033[0;37m\]using\[\033[0m\] \$(rbenv_ps1) \[\033[0;37m\]at\[\033[0m\] \\W \$(parse_git_branch) \n\\[\033[0;31m\]\\$\[\033[0m\] "
 
 # Overwriting PATH for better homebrew compatibility
-PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH:/usr/local/share/python
+PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH:/usr/local/share/python
 
 # Default Editor
-export EDITOR=mvim
+export EDITOR=vim
 
 # Call Aliases
 source ~/.aliases
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # rbenv Configurations
 source ~/.rbenvrc
 
-# Python
-#PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+### Added by the Heroku Toolbelt
+PATH="/usr/local/heroku/bin:$PATH"
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
-
