@@ -12,16 +12,28 @@ function parse_git_branch {
   fi
 }
 
-# Tell ls to be colourful
-export CLICOLOR=1
-export LSCOLORS=Exfxcxdxbxegedabagacad
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWSTASHSTATE=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWUPSTREAM="auto"
+color_off='\e[0m' # Text Reset
+black='\e[0;30m' # Black
+red='\e[0;31m' # Red
+green='\e[0;32m' # Green
+yellow='\e[0;33m' # Yellow
+blue='\e[0;34m' # Blue
+purple='\e[0;35m' # Purple
+cyan='\e[0;36m' # Cyan
+white='\e[0;37m' # White
 
-# Tell grep to highlight matches
+# Tell things to be colourful
+export GREP_COLOR="1;31"
 export GREP_OPTIONS='--color=auto'
+export LESS="-R"
 export TERM=xterm-256color
 
 # Simple PS1
-PS1="\[\033[0;37m\]using\[\033[0m\] \$(rbenv_ps1) \[\033[0;37m\]at\[\033[0m\] \\W \$(parse_git_branch) \n\\[\033[0;31m\]\\$\[\033[0m\] "
+PS1="\[${white}\]using\[${color_off}\] \$(rbenv_ps1) \[${white}\]at\[${color_off}\] \\W \$(parse_git_branch) \n\\[${purple}\]\$\[${color_off}\] "
 
 # Overwriting PATH for better homebrew compatibility
 PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH:/usr/local/share/python
