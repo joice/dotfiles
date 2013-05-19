@@ -19,7 +19,6 @@ Bundle "gmarik/vundle"
 " All your bundles here
 
 " Ruby, Rails, Rake...
-Bundle "astashov/vim-ruby-debugger"
 Bundle "ecomba/vim-ruby-refactoring"
 Bundle "skwp/vim-ruby-conque"
 Bundle "tpope/vim-rails.git"
@@ -55,6 +54,7 @@ Bundle "skwp/vim-git-grep-rails-partial"
 Bundle "tjennings/git-grep-vim"
 Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-git"
+Bundle 'airblade/vim-gitgutter'
 
 " General text editing improvements...
 Bundle "AndrewRadev/splitjoin.vim"
@@ -81,7 +81,6 @@ Bundle "majutsushi/tagbar.git"
 Bundle "mattn/webapi-vim.git"
 Bundle "rking/ag.vim"
 Bundle "scrooloose/nerdtree.git"
-Bundle "scrooloose/syntastic.git"
 Bundle "sjbach/lusty.git"
 Bundle "sjl/gundo.vim"
 Bundle "skwp/YankRing.vim"
@@ -124,6 +123,7 @@ Bundle "slim-template/vim-slim.git"
 Bundle "bogado/file-line.git"
 Bundle "tpope/vim-rvm.git"
 Bundle "nelstrom/vim-visual-star-search"
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 " Customization
 " The plugins listed in ~/.vim/.vundles.local will be added here to
