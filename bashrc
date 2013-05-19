@@ -1,3 +1,19 @@
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWSTASHSTATE=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWUPSTREAM="auto"
+color_off='\e[0m' # Text Reset
+black='\e[0;30m' # Black
+bright_black='\e[1;30m' # Black
+red='\e[0;31m' # Red
+green='\e[0;32m' # Green
+yellow='\e[0;33m' # Yellow
+blue='\e[0;34m' # Blue
+purple='\e[0;35m' # Purple
+cyan='\e[0;36m' # Cyan
+white='\e[0;37m' # White
+
+
 # Prompt with ruby version
 # rbenv version | sed -e 's/ .*//'
 function rbenv_ps1 () {
@@ -8,32 +24,19 @@ function rbenv_ps1 () {
 function parse_git_branch {
   git_branch=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
   if [ "$git_branch" ]; then
-    printf "\033[0;37mon\033[0m $git_branch"
+    printf "${black}on ${bright_black}$git_branch"
   fi
 }
 
-GIT_PS1_SHOWDIRTYSTATE=1
-GIT_PS1_SHOWSTASHSTATE=1
-GIT_PS1_SHOWUNTRACKEDFILES=1
-GIT_PS1_SHOWUPSTREAM="auto"
-color_off='\e[0m' # Text Reset
-black='\e[0;30m' # Black
-red='\e[0;31m' # Red
-green='\e[0;32m' # Green
-yellow='\e[0;33m' # Yellow
-blue='\e[0;34m' # Blue
-purple='\e[0;35m' # Purple
-cyan='\e[0;36m' # Cyan
-white='\e[0;37m' # White
-
 # Tell things to be colourful
+export CLICOLOR=1
 export GREP_COLOR="1;31"
 export GREP_OPTIONS='--color=auto'
 export LESS="-R"
 export TERM=xterm-256color
 
 # Simple PS1
-PS1="\[${white}\]using\[${color_off}\] \$(rbenv_ps1) \[${white}\]at\[${color_off}\] \\W \$(parse_git_branch) \n\\[${purple}\]\$\[${color_off}\] "
+PS1="\[${black}\]using\[${bright_black}\] \$(rbenv_ps1) \[${black}\]at\[${bright_black}\] \\W \$(parse_git_branch) \n\\[${red}\]\$\[${color_off}\] "
 
 # Overwriting PATH for better homebrew compatibility
 PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH:/usr/local/share/python

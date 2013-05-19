@@ -2,7 +2,9 @@
 
 " http://ethanschoonover.com/solarized/vim-colors-solarized
 set background=light
-colorscheme Tomorrow
+let g:solarized_termcolors = 16
+let g:solarized_termtrans = 0
+colorscheme solarized
 
 highlight clear SignColumn
 
@@ -18,7 +20,7 @@ if has("gui_running")
   set lines=60
   set columns=190
 
-  set guifont=Inconsolata\ for\ Powerline:h16
+  set guifont=Inconsolata\ for\ Powerline:h17
 else
   "dont load csapprox if we no gui support - silences an annoying warning
   let g:CSApprox_loaded = 1
