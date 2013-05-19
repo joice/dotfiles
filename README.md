@@ -1,12 +1,33 @@
-brennovich dotfiles
-===================
+# brennovich dotfiles
 
-- Based on thoughtbots dotfiles
+Focused simple dotfiles for OSX ruby developers based on thoughtbots dotfiles.
 
-Features
---------
+## Features
 
-- Janus
+- Fully featured vim configuration (extracted from YADR)
+
+## Instalation
+
+```shell
+git clone git://github.com/brennovich/dotfiles.git
+cd dotfiles
+./install
+```
+
+### YADR VIM Files
+
+1. Install Vundle:
+
+```shell
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+```
+
+2. Install your bundle:
+
+```shell
+vim +BundleInstall +qall
+```
+
 - Clean bash_profile
-- Featured vimrc.after config
+- Nice git stuff
 - `gemrc` install gem without docs
