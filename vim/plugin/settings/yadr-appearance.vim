@@ -1,9 +1,9 @@
 " Make it beautiful - colors and fonts
 
 " http://ethanschoonover.com/solarized/vim-colors-solarized
-set background=light
-let g:solarized_termcolors = 16
-let g:solarized_termtrans = 0
+set background=dark
+let g:solarized_termcolors = 256
+let g:solarized_termtrans = 1
 colorscheme solarized
 
 highlight clear SignColumn
@@ -17,10 +17,10 @@ if has("gui_running")
   " (the numbers don't show up) so I made it a VimEnter event
   autocmd VimEnter * set guitablabel=%N:\ %t\ %M
 
-  set lines=60
-  set columns=190
+  set lines=30
+  set columns=100
 
-  set guifont=Inconsolata\ for\ Powerline:h17
+  set guifont=Inconsolata\ for\ Powerline:h18
 else
   "dont load csapprox if we no gui support - silences an annoying warning
   let g:CSApprox_loaded = 1

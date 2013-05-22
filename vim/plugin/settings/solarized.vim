@@ -41,11 +41,12 @@ hi! link htmlTagName Type
 hi! PreProc gui=bold
 
 hi! VertSplit guifg=#003745 cterm=NONE term=NONE ctermfg=NONE ctermbg=NONE
-hi! LineNR ctermbg=15
+hi! LineNR guifg=#004C60 gui=bold guibg=#002B36 ctermbg=NONE ctermfg=10
 hi! link NonText VertSplit
 hi! link htmlLink Include
 hi! CursorLine cterm=NONE gui=NONE
-hi! Visual ctermbg=8
+hi! Visual ctermbg=7
 
 " Enforce the colors set here
 au VimEnter * so ~/.vim/plugin/settings/solarized.vim
+

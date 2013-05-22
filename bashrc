@@ -13,7 +13,6 @@ purple='\e[0;35m' # Purple
 cyan='\e[0;36m' # Cyan
 white='\e[0;37m' # White
 
-
 # Prompt with ruby version
 # rbenv version | sed -e 's/ .*//'
 function rbenv_ps1 () {
@@ -24,7 +23,7 @@ function rbenv_ps1 () {
 function parse_git_branch {
   git_branch=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
   if [ "$git_branch" ]; then
-    printf "${black}on ${bright_black}$git_branch"
+    printf "${color_off}on ${white}$git_branch"
   fi
 }
 
@@ -36,7 +35,7 @@ export LESS="-R"
 export TERM=xterm-256color
 
 # Simple PS1
-PS1="\[${black}\]using\[${bright_black}\] \$(rbenv_ps1) \[${black}\]at\[${bright_black}\] \\W \$(parse_git_branch) \n\\[${red}\]\$\[${color_off}\] "
+PS1="using\[${white}\] \$(rbenv_ps1) \[${color_off}\]at\[${white}\] \\W \$(parse_git_branch) \n\\[${red}\]\$\[${color_off}\] "
 
 # Overwriting PATH for better homebrew compatibility
 PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH:/usr/local/share/python
