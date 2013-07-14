@@ -38,16 +38,21 @@ export TERM=xterm-256color
 PS1="using\[${white}\] \$(rbenv_ps1) \[${color_off}\]at\[${white}\] \\W \$(parse_git_branch) \n\\[${red}\]\$\[${color_off}\] "
 
 # Overwriting PATH for better homebrew compatibility
-PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH:/usr/local/share/python
+PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
 
 # Default Editor
 export EDITOR=vim
+
+set -o vi
 
 # Call Aliases
 source ~/.aliases
 
 # rbenv Configurations
 source ~/.rbenvrc
+
+# Badabum assets server TODO: Delete this
+export ASSETS_SERVER_PATH=~/code/badabum_assets_server
 
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:$PATH"
