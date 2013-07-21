@@ -14,3 +14,6 @@ zeus.json
 public/rbp.html
 .ruby-version
 brakeman.html
+~/code/badabum-app/themes/**/*
+config/local_configs/brotobookpro.home.yml
+config/local_configs/brotoBookPro.local.yml

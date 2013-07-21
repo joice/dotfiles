@@ -2,6 +2,8 @@ GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWUPSTREAM="auto"
+
+# Colors
 color_off='\e[0m' # Text Reset
 black='\e[0;30m' # Black
 bright_black='\e[1;30m' # Black
@@ -23,7 +25,7 @@ function rbenv_ps1 () {
 function parse_git_branch {
   git_branch=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
   if [ "$git_branch" ]; then
-    printf "${color_off}on ${white}$git_branch"
+    printf "${color_off}on ${red}$git_branch"
   fi
 }
 
@@ -35,7 +37,7 @@ export LESS="-R"
 export TERM=xterm-256color
 
 # Simple PS1
-PS1="using\[${white}\] \$(rbenv_ps1) \[${color_off}\]at\[${white}\] \\W \$(parse_git_branch) \n\\[${red}\]\$\[${color_off}\] "
+PS1="\[${color_off}\]using \[${blue}\]\$(rbenv_ps1) \[${color_off}\]at\[${green}\] \\W \$(parse_git_branch) \n\\[${red}\]\$\[${color_off}\] "
 
 # Overwriting PATH for better homebrew compatibility
 PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
@@ -50,9 +52,6 @@ source ~/.aliases
 
 # rbenv Configurations
 source ~/.rbenvrc
-
-# Badabum assets server TODO: Delete this
-export ASSETS_SERVER_PATH=~/code/badabum_assets_server
 
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:$PATH"

@@ -39,6 +39,7 @@ Bundle "groenewege/vim-less.git"
 Bundle "itspriddle/vim-jquery.git"
 Bundle "jtratner/vim-flavored-markdown.git"
 Bundle "kchmck/vim-coffee-script"
+Bundle "rodjek/vim-puppet"
 Bundle "kogakure/vim-sparkup.git"
 Bundle "nelstrom/vim-markdown-preview"
 Bundle "skwp/vim-html-escape"
@@ -46,6 +47,7 @@ Bundle "slim-template/vim-slim.git"
 Bundle "timcharper/textile.vim.git"
 Bundle "tpope/vim-haml"
 Bundle "wavded/vim-stylus"
+Bundle "nono/vim-handlebars"
 
 " Git related...
 Bundle "gregsexton/gitv"
@@ -112,18 +114,20 @@ Bundle "nathanaelkane/vim-indent-guides"
 Bundle "nelstrom/vim-textobj-rubyblock"
 Bundle "thinca/vim-textobj-function-javascript"
 Bundle "vim-scripts/argtextobj.vim"
+Bundle "sickill/vim-pasta"
 
 " Cosmetics, color scheme, Powerline...
 Bundle "chrisbra/color_highlight.git"
-Bundle "skwp/vim-colors-solarized"
+Bundle "altercation/solarized", {"rtp": "vim-colors-solarized"}
+Bundle "chriskempson/base16-vim"
 Bundle "vim-scripts/TagHighlight.git"
 Bundle "itspriddle/vim-jquery.git"
 Bundle "slim-template/vim-slim.git"
 Bundle "bogado/file-line.git"
 Bundle "tpope/vim-rvm.git"
 Bundle "nelstrom/vim-visual-star-search"
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle "chriskempson/tomorrow-theme", {"rtp": "vim/"}
+Bundle "Lokaltog/powerline", {"rtp": "powerline/bindings/vim/"}
 
 " Customization
 " The plugins listed in ~/.vim/.vundles.local will be added here to

@@ -110,7 +110,6 @@ autocmd FileType rspec map <buffer> <D-k> {
 autocmd FileType javascript map <buffer> <D-k> }
 autocmd FileType javascript map <buffer> <D-j> {
 
-
 " Command-/ to toggle comments
 map <D-/> :TComment<CR>
 imap <D-/> <Esc>:TComment<CR>i
@@ -143,15 +142,15 @@ nnoremap <silent> <C-j> <C-w>j
 map <silent> ,gz <C-w>o
 
 " Use numbers to pick the tab you want (like iTerm)
-map <silent> <D-1> :tabn 1<cr>
-map <silent> <D-2> :tabn 2<cr>
-map <silent> <D-3> :tabn 3<cr>
-map <silent> <D-4> :tabn 4<cr>
-map <silent> <D-5> :tabn 5<cr>
-map <silent> <D-6> :tabn 6<cr>
-map <silent> <D-7> :tabn 7<cr>
-map <silent> <D-8> :tabn 8<cr>
-map <silent> <D-9> :tabn 9<cr>
+map <silent> <C-1> :tabn 1<cr>
+map <silent> <C-2> :tabn 2<cr>
+map <silent> <C-3> :tabn 3<cr>
+map <silent> <C-4> :tabn 4<cr>
+map <silent> <C-5> :tabn 5<cr>
+map <silent> <C-6> :tabn 6<cr>
+map <silent> <C-7> :tabn 7<cr>
+map <silent> <C-8> :tabn 8<cr>
+map <silent> <C-9> :tabn 9<cr>
 
 " Create window splits easier. The default
 " way is Ctrl-w,v and Ctrl-w,s. I remap
@@ -221,11 +220,11 @@ nmap sk :SplitjoinJoin<cr>
 " vim-ruby-conque
 " ============================
 " Cmd-Shift-R for RSpec
-nmap <silent> <D-R> :call RunRspecCurrentFileConque()<CR>
+nnoremap <leader>R :call RunRspecCurrentFileConque()<CR>
 " Cmd-Shift-L for RSpec Current Line
-nmap <silent> <D-L> :call RunRspecCurrentLineConque()<CR>
+nnoremap <leader>RL :call RunRspecCurrentLineConque()<CR>
 " ,Cmd-R for Last conque command
-nmap <silent> ,<D-R> :call RunLastConqueCommand()<CR>
+nnoremap <leader>LC :call RunLastConqueCommand()<CR>
 
 " Get the current highlight group. Useful for then remapping the color
 map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
