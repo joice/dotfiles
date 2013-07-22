@@ -77,7 +77,6 @@ Bundle "vim-scripts/matchit.zip.git"
 " General vim improvements
 Bundle "MarcWeber/vim-addon-mw-utils.git"
 Bundle "bogado/file-line.git"
-Bundle "jistr/vim-nerdtree-tabs.git"
 Bundle "kien/ctrlp.vim"
 Bundle "majutsushi/tagbar.git"
 Bundle "mattn/webapi-vim.git"
@@ -119,15 +118,12 @@ Bundle "sickill/vim-pasta"
 " Cosmetics, color scheme, Powerline...
 Bundle "chrisbra/color_highlight.git"
 Bundle "altercation/solarized", {"rtp": "vim-colors-solarized"}
-Bundle "chriskempson/base16-vim"
 Bundle "vim-scripts/TagHighlight.git"
 Bundle "itspriddle/vim-jquery.git"
 Bundle "slim-template/vim-slim.git"
 Bundle "bogado/file-line.git"
-Bundle "tpope/vim-rvm.git"
 Bundle "nelstrom/vim-visual-star-search"
 Bundle "chriskempson/tomorrow-theme", {"rtp": "vim/"}
-Bundle "Lokaltog/powerline", {"rtp": "powerline/bindings/vim/"}
 
 " Customization
 " The plugins listed in ~/.vim/.vundles.local will be added here to
