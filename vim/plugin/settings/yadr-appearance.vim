@@ -1,7 +1,5 @@
-" Make it beautiful - colors and fonts
-
-set background=light
-colorscheme Tomorrow
+set background=dark
+colorscheme solarized
 
 if has("gui_running")
 
@@ -23,7 +21,7 @@ else
 
   let g:solarized_termcolors = 16
   let g:solarized_termtrans = 1
-  highlight clear SignColumn
 endif
 
+highlight clear SignColumn
 set colorcolumn=80
