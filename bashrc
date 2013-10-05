@@ -36,6 +36,9 @@ export GREP_OPTIONS='--color=auto'
 export LESS="-R"
 export TERM=xterm-256color
 
+# Oversized history
+export HISTSIZE=5000
+
 # Simple PS1
 PS1="\[${color_off}\]using \[${blue}\]\$(rbenv_ps1) \[${color_off}\]at\[${green}\] \\W \$(parse_git_branch) \n\\[${red}\]\$\[${color_off}\] "
 
