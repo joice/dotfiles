@@ -10,10 +10,11 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 
 " Change directory to the current buffer when opening files.
-set autochdir
+" set autochdir
 
 let g:netrw_special_syntax = 1
 let g:netrw_winsize = 20
+"let g:netrw_preview = 1
 
 " Toggle Vexplore
 function! ToggleVexplore()

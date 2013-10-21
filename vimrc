@@ -26,6 +26,8 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'majutsushi/tagbar.git'
 NeoBundle 'nono/vim-handlebars'
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-endwise.git'
@@ -40,10 +42,9 @@ NeoBundle 'tpope/vim-surround.git'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-addon-mw-utils'
 NeoBundle 'vim-ruby/vim-ruby.git'
+NeoBundle 'bling/vim-airline'
 
 filetype plugin indent on
 
 " Installation check.
 NeoBundleCheck
-
-highlight clear SignColumn
