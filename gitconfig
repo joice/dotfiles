@@ -79,7 +79,6 @@
   # Productivity
   lastday = log --author=Brenno --pretty=oneline --all --since=1.day
   lastfriday = log --author=Brenno --pretty=oneline --all --since='last Sex'
-	batata = commit
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [merge]
