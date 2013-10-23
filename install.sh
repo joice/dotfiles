@@ -1,7 +1,5 @@
 #!/bin/sh
 
-ln -s "$PWD/vim/vimrc" "$HOME/.vimrc"
-
 cutstring="DO NOT EDIT BELOW THIS LINE"
 
 for name in *; do
