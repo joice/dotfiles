@@ -1,10 +1,10 @@
 # brennovich dotfiles
 
-Focused simple dotfiles for OSX ruby developers based on thoughtbots dotfiles.
+Focused simple dotfiles for linux ruby developers based on thoughtbots dotfiles.
 
 ## Features
 
-- Fully featured vim configuration (extracted from YADR)
+- Fully featured vim configuration
 
 ## Instalation
 
@@ -14,18 +14,18 @@ cd dotfiles
 ./install
 ```
 
-### YADR VIM Files
+### VIM Files
 
-1. Install Vundle:
+1. Install Neobundle:
 
 ```shell
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
 
 2. Install your bundle:
 
 ```shell
-vim +BundleInstall +qall
+vim +NeoBundleInstall
 ```
 
 - Clean bash_profile
