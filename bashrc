@@ -58,4 +58,3 @@ source ~/.rbenvrc
 
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:$PATH"
-
