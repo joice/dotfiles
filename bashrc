@@ -67,3 +67,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Autostart tmux
+if [[ -z "$TMUX" ]]; then
+  tmux -u new-session -s default -A
+fi
