@@ -10,3 +10,5 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_map = ',t'
 nnoremap <silent> ,t :CtrlP<CR>
 
+" Results window configs
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:105,results:105'
