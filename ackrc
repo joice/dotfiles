@@ -8,3 +8,5 @@
 --ignore-dir=log
 --ignore-dir=tags
 --ignore-dir=tmp
+--ignore-dir=db/sphinx
+--ignore-file=is:tags
