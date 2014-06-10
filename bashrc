@@ -59,22 +59,11 @@ source ~/.rbenvrc
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:$PATH"
 
-# Bash completion
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
 fi
 
 # Autostart tmux
 if [[ -z "$TMUX" ]]; then
   tmux -u new-session -s default -A
 fi
-
-export RUBY_GC_HEAP_INIT_SLOTS=800000
-export RUBY_HEAP_FREE_MIN=100000
-export RUBY_HEAP_SLOTS_INCREMENT=300000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=79000000
