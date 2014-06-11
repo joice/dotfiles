@@ -1,0 +1,12 @@
+# [Created by task 2.3.0 6/10/2014 18:57:46]
+# Taskwarrior program configuration file.
+# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-faq',
+# 'man task-tutorial', 'man task-color', 'man task-sync' or 'man taskrc'
+
+# Use the command 'task show' to see all defaults and overrides
+
+# Files
+data.location=~/Dropbox/.task
+
+# Color theme
+include /Users/brenno/.homebrew/Cellar/task/2.3.0/share/doc/task/rc/solarized-light-256.theme
