@@ -9,4 +9,4 @@
 data.location=~/Dropbox/.task
 
 # Color theme
-include /Users/brenno/.homebrew/Cellar/task/2.3.0/share/doc/task/rc/solarized-light-256.theme
+include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/solarized-light-256.theme

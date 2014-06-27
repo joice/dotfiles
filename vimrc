@@ -51,6 +51,7 @@ NeoBundle 'tpope/vim-surround.git'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-addon-mw-utils'
 NeoBundle 'vim-ruby/vim-ruby.git'
+NeoBundle 'ledger/vim-ledger'
 
 filetype plugin indent on
 

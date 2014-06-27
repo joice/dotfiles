@@ -51,3 +51,6 @@ alias ss='spin serve'
 alias be='bundle exec'
 alias spa='sp spec'
 alias ack='ack-grep'
+
+# CLI Tools
+alias finance='ledger -f ~/Dropbox/.finances.ldg'
