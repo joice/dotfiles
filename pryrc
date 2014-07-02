@@ -10,11 +10,6 @@ Pry.config.exception_handler = proc do |output, exception, pry|
   output.puts Pry::Helpers::Text.red("#{exception.class}: #{exception.message}\n from #{exception.backtrace.first}")
 end
 
-if defined?(Rails)
-  require 'rails/console/app'
-  require 'rails/console/helpers'
-end
-
 begin
   require 'awesome_print'
 
