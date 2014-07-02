@@ -50,7 +50,7 @@ alias spr='sp push rspec'
 alias ss='spin serve'
 alias be='bundle exec'
 alias spa='sp spec'
-alias ack='ack-grep'
+alias build_ctags='ctags -R -f ./.git/tags .'
 
 # CLI Tools
 alias finance='ledger -f ~/Dropbox/.finances.ldg'

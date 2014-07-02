@@ -43,7 +43,7 @@ export HISTSIZE=5000
 PS1="\[${color_off}\]using \[${blue}\]\$(rbenv_ps1) \[${color_off}\]at\[${green}\] \\W \$(parse_git_branch) \n\\[${red}\]\$\[${color_off}\] "
 
 # Overwriting PATH for better homebrew compatibility
-PATH=/usr/local/bin:/usr/local/sbin:$PATH
+PATH=$HOME/.homebrew/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Default Editor
 export EDITOR=vim
