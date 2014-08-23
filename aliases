@@ -54,3 +54,4 @@ alias build_ctags='ctags -R -f ./.git/tags .'
 
 # CLI Tools
 alias finance='ledger -f ~/Dropbox/.finances.ldg'
+alias nv='nvim'
