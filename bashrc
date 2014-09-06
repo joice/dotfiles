@@ -45,6 +45,10 @@ PS1="\[${color_off}\]using \[${blue}\]\$(rbenv_ps1) \[${color_off}\]at\[${green}
 # Overwriting PATH for better homebrew compatibility
 PATH=$HOME/.homebrew/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
+# Go \o/
+export GOPATH=$HOME/code/go
+export PATH=$PATH:$GOPATH/bin
+
 # Default Editor
 export EDITOR=vim
 
