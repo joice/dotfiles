@@ -9,4 +9,5 @@
 --ignore-dir=tags
 --ignore-dir=tmp
 --ignore-dir=db/sphinx
+--ignore-dir=vendor/bundle/
 --ignore-file=is:tags
