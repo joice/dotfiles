@@ -6,7 +6,7 @@ endif
 set encoding=utf-8
 set termencoding=utf-8
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -56,6 +56,9 @@ NeoBundle 'tpope/vim-surround.git'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-addon-mw-utils'
 NeoBundle 'vim-ruby/vim-ruby.git'
+
+call neobundle#end()
+
 filetype plugin indent on
 
 " Installation check.
