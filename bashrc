@@ -65,6 +65,6 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # Autostart tmux
-if [[ -z "$TMUX" ]]; then
+if [[ $TMUX ]]; then
   tmux -u new-session -s default -A
 fi
